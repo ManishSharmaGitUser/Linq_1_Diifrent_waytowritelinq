@@ -22,6 +22,14 @@ namespace DiffrentWaysOfWritingQueries
 
             query_syntax.ForEachWithIndex((item, idx) => Console.WriteLine("{0}: {1}", idx, item));
 
+            ////method syntax using
+            ///
+            var result = query_syntax.Where(x => x > 2);
+
+            Console.WriteLine("Printing via method syntax");
+            query_syntax.ForEachWithIndex((item, idx) => Console.WriteLine("{0}: {1}", idx, item));
+
+
             Console.ReadLine();
         }
 
