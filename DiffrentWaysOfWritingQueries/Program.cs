@@ -23,8 +23,8 @@ namespace DiffrentWaysOfWritingQueries
             query_syntax.ForEachWithIndex((item, idx) => Console.WriteLine("{0}: {1}", idx, item));
 
             ////method syntax using
-            ///
-            var result = query_syntax.Where(x => x > 2);
+            ///when uses AsQueryable then filtering done on server side
+            var result = query_syntax.Where(x => x > 2).AsQueryable();
 
             Console.WriteLine("Printing via method syntax");
             query_syntax.ForEachWithIndex((item, idx) => Console.WriteLine("{0}: {1}", idx, item));
